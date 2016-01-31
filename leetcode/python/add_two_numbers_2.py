@@ -63,12 +63,11 @@ class Solution(object):
 
 def init_list_node(list1):
     """change list to listnode"""
-    l1 = ListNode(list1[0])
-    tmp = l1
-    for num in list1[1:len(list1)]:
+    l1 = tmp = ListNode(0)
+    for num in list1:
         tmp.next = ListNode(num)
         tmp = tmp.next
-    return l1
+    return l1.next
 
 
 if __name__ == '__main__':
